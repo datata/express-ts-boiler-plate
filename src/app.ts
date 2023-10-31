@@ -14,6 +14,6 @@ app.get('/', (__req, res)=> res.json({
 
 app.use('/api', router)
 
-app.listen(PORT, () => {
+export default app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`)
 })
