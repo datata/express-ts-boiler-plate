@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 const generator = (controllerFunction: Function, params: string[], statusCode: number) => {
   return (req: Request, res: Response) => {
     try {
-      const requestData: any = {};
+      const requestData: Record<string, any> = {};
 
       params.forEach(param => {
         const source = param.split('.');
